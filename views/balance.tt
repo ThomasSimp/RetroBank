@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Balance - RetroBank</title></head>
+<body>
+    <h1>Welcome, [% username %]</h1>
+    <p>Your current balance is: $[% balance %]</p>
+
+    <form method="post" action="/dashboard/add_money" id="add_money">
+        <label for="amount">Add Money:</label>
+        <input type="number" id="amount" name="amount" required>
+        <button type="submit">Deposit</button>
+    </form>
+
+    <a href="/dashboard">Back to Dashboard</a>
+    <a href="/dashboard/transactions">View Transactions</a>
+</body>
+</html>

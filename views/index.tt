@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroBank - Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, #6200ea, #3700b3);
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 10px 0 20px;
+        }
+
+        .hero button {
+            background-color: #03dac5;
+            border: none;
+            color: #333;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #02b3a4;
+        }
+
+        .features {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .features h3 {
+            font-size: 1.5rem;
+            color: #6200ea;
+        }
+
+        .features p {
+            font-size: 1rem;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to RetroBank</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Banking Made Simple</h2>
+        <p>Join RetroBank today and manage your finances with ease and security.</p>
+        <button onclick="window.location.href='/login'">Get Started</button>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+        <h3>Why Choose RetroBank?</h3>
+        <p>🔒 Secure and reliable banking services.</p>
+        <p>⚡ Fast and seamless transactions.</p>
+        <p>🌟 Trusted by thousands of users worldwide.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 RetroBank. All rights reserved.</p>
+    </footer>
+</body>
+</html>

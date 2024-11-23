@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: retrobank
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: PERL_ENV
+        value: production
+    buildCommand: ""
+    startCommand: "perl bin/retrobank.pl"
