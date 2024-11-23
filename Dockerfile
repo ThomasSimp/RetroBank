@@ -13,6 +13,9 @@ COPY cpanfile cpanfile.snapshot ./
 # Install dependencies using Carton
 RUN carton install
 
+# Required modules for Dancer2
+RUN cpanm Module::Pluggable::Object Config::Any
+
 # If carton fails for any reason, fallback to cpanm directly for Dancer2
 RUN cpanm Dancer2
 
