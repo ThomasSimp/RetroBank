@@ -7,6 +7,9 @@ WORKDIR /app
 # Install Carton (a dependency manager for Perl)
 RUN cpanm Carton
 
+# Copy dependency files first (to leverage Docker layer caching)
+COPY cpanfile cpanfile.snapshot ./
+
 # Install dependencies using Carton
 RUN carton install
 
