@@ -1,23 +1,133 @@
 <!DOCTYPE html>
-<html>
-<head><title>Transactions - RetroBank</title></head>
-<body>
-    <h1>Transaction History</h1>
-    <table border="1">
-        <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Date</th>
-        </tr>
-        [% FOREACH transaction IN transactions %]
-        <tr>
-            <td>[% transaction.type %]</td>
-            <td>$[% transaction.amount %]</td>
-            <td>[% transaction.created_at %]</td>
-        </tr>
-        [% END %]
-    </table>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - RetroBank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
 
-    <a href="/dashboard">Back to Dashboard</a>
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main h1 {
+            color: #6200ea;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        table th {
+            background-color: #6200ea;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .links {
+            margin: 20px 0;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #6200ea;
+            font-size: 1rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #3700b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>RetroBank - Transactions</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Transaction History</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                [% FOREACH transaction IN transactions %]
+                <tr>
+                    <td>[% transaction.type %]</td>
+                    <td>$[% transaction.amount %]</td>
+                    <td>[% transaction.created_at %]</td>
+                </tr>
+                [% END %]
+            </tbody>
+        </table>
+
+        <div class="links">
+            <a href="/dashboard">Back to Dashboard</a>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 RetroBank. All rights reserved.</p>
+    </footer>
 </body>
 </html>
