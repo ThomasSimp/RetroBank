@@ -11,6 +11,10 @@ get '/' => sub {
 
 # Define route for login page
 get '/login' => sub {
+    my $user = session('user');
+    if ($user) {
+        redirect '/dashboard';  # Redirect if already logged in
+    }
     return template 'login.tt';
 };
 
@@ -29,6 +33,10 @@ post '/login' => sub {
 
 # Define route for registration page
 get '/register' => sub {
+    my $user = session('user');
+    if ($user) {
+        redirect '/dashboard';  # Redirect if already logged in
+    }
     return template 'register.tt';
 };
 
