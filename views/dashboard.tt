@@ -150,7 +150,7 @@
             <h3>Quick Actions</h3>
             <ul>
                 <li><a href="/dashboard/balance">View Balance</a></li>
-                <li><a href="/dashboard/add_money">Add Money</a></li>
+                <li><a href="/dashboard/balance">Add Money</a></li>
                 <li><a href="/dashboard/transactions">View Transactions</a></li>
             </ul>
         </div>
